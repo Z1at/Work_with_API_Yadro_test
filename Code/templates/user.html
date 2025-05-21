@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Details</h1>
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="User Image">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+                <p class="card-text">
+                    <strong>Gender:</strong> {{ user.gender }}<br>
+                    <strong>Phone:</strong> {{ user.phone }}<br>
+                    <strong>Email:</strong> {{ user.email }}<br>
+                    <strong>Location:</strong> {{ user.city }}, {{ user.country }}
+                </p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
