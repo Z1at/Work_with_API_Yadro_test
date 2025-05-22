@@ -21,7 +21,7 @@ class User(db.Model):
     country = db.Column(db.String(50))
     city = db.Column(db.String(50))
     thumbnail = db.Column(db.String(200))
-    large_picture = db.Column(db.String(200)) # Store the large picture URL
+    large_picture = db.Column(db.String(200))
 
     def __repr__(self):
         return f'<User {self.first_name} {self.last_name}>'
