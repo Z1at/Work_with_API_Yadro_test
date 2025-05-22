@@ -43,8 +43,6 @@ def load_users_from_api(num_users):
             thumbnail=result['picture']['thumbnail'],
             large_picture=result['picture']['large']
         )
-        print(f"Thumbnail URL: {user.thumbnail}")  # Добавляем отладочный вывод
-        print(f"Large Picture URL: {user.large_picture}")
     db.session.add(user)
     db.session.commit()
 
