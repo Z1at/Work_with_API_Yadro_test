@@ -150,6 +150,11 @@ def random_user():
         return "No users in the database."
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Not Found", 404
+
+
 def create_db():
     """
     Создает таблицу базы данных и загружает начальные данные, если база данных пуста.
